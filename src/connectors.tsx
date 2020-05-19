@@ -4,20 +4,19 @@ import PortisApi from "@portis/web3";
 const { InjectedConnector, PortisConnector } = Connectors;
 
 const supportedNetworkURLs = {
-  1: "https://mainnet.infura.io/v3/60ab76e16df54c808e50a79975b4779f",
-  4: "https://rinkeby.infura.io/v3/60ab76e16df54c808e50a79975b4779f"
+  42: "https://kovan.infura.io/v3/60ab76e16df54c808e50a79975b4779f"
 };
 
-const defaultNetwork = 1;
+const defaultNetwork = 42;
 
 const Injected = new InjectedConnector({
-  supportedNetworks: [1, 4]
+  supportedNetworks: [42]
 });
 
 const Portis = new PortisConnector({
   api: PortisApi,
-  dAppId: "211b48db-e8cc-4b68-82ad-bf781727ea9e",
-  network: "mainnet"
+  dAppId: "e968e6c4-1e6d-4eb9-93c8-60a6f2c49fdb",
+  network: "kovan"
 });
 
 export default {
